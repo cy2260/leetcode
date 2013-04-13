@@ -1,0 +1,8 @@
+69. Sqrt(x) 4/4
+
+Implement int sqrt(int x).
+
+Compute and return the square root of x.
+
+binary search
+avoid integer overflow
