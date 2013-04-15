@@ -1,1 +1,7 @@
 LeetCode Practice
+
+
+26	Remove Duplicates from Sorted Array	1	3	array, two pointers
+27	Remove Element				1	4	array, two pointers
+58	Length of Last Word			1	1	string
+66	Plus One					1	2	array, math
