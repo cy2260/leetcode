@@ -1,0 +1,7 @@
+101. Symmetric Tree 1.2
+
+Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
+
+Bonus points if you could solve it both recursively and iteratively.
+
+will add iterative solution later on
