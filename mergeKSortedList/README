@@ -1,0 +1,6 @@
+23 Merge k Sorted Lists 3/4
+
+Merge k sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+
+merge one by one, O(kn), times of comparison, k*(k-1)/2 * n/k -> O(kn)
+heap, O(lgk*n), times of compasion in head is lgk
