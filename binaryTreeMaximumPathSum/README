@@ -1,0 +1,31 @@
+124. Binary Tree Maximum Path Sum 4/2
+Given a binary tree, find the maximum path sum.
+
+The path may start and end at any node in the tree.
+
+For example:
+Given the below binary tree,
+
+       1
+      / \
+     2   3
+Return 6.
+
+       1
+      / \
+     -2 -1
+Return 1.
+
+      Node
+     /    \
+   L-sub  R-sub
+   /  \   /  \
+  ..  .. ..  ..
+
+for each root node, there are 4 possible paths:
+1. only root node, if sums of both subtrees are negative
+2. left + root + right, if sums of both subrees are positive
+3. left + root, if sum of right subtree is negative
+4. root + right, if sum of left subtree is negative
+
+dfs
