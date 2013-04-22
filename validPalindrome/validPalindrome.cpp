@@ -17,7 +17,6 @@ public:
             if( low <= high ) {
                 if( toupper(s[low++]) != toupper(s[high--]) ) return false;
             }
-            else  return true;
         }
         return true;
     }
