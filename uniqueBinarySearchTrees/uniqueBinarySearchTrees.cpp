@@ -25,16 +25,17 @@ public:
 
     int numTrees(int n) {
         if( n == 0 || n == 1 ) return 1;
-        int dp[n];
-        memset( dp, 0, sizeof(int)*n );
-        dp[0] = dp[1] = 1;
+        int dp[n+1];
+        memset( dp, 0, sizeof(int)*(n+1) );
         
-        for( int i = 2; i < n; ++i ) {
+        dp[0] = dp[1] = 1;
+    
+        for( int i = 2; i <= n; ++i ) {
             for( int j = 0; j < i; ++j ) {
                 dp[i] += dp[j]*dp[i-j-1];
             }
         }
-        return dp[n-1];     
+        
+        return dp[n];     
     }
 };
-
