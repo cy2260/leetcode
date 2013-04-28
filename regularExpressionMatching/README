@@ -1,0 +1,42 @@
+10.  Regular Expression Matching 5/3
+
+Implement regular expression matching with support for '.' and '*'.
+
+'.' Matches any single character.
+'*' Matches zero or more of the preceding element.
+
+The matching should cover the entire input string (not partial).
+
+The function prototype should be:
+bool isMatch(const char *s, const char *p)
+
+Some examples:
+isMatch("aa","a") ? false
+isMatch("aa","aa") ? true
+isMatch("aaa","aa") ? false
+isMatch("aa", "a*") ? true
+isMatch("aa", ".*") ? true
+isMatch("ab", ".*") ? true
+isMatch("aab", "c*a*b") ? true
+
+dfs recursion+memorization
+
+memorize the failure case to avoid duplidated validation
+for example, aaab a*a*a*c 
+a*a*c - aaab
+    a*c - aaab
+        c - aaab
+    a*c - aab fail  -------------dup------------
+    	c - aab fail
+	c - ab  fail
+	c - b   fail
+    a*c - ab
+    a*c - b
+a*a*c - aab
+    a*c - aab fail -------------dup-------------
+    a*c - ab
+    a*c - ab
+a*a*c - ab
+a*a*c - b
+
+dfs will be called for two dups
