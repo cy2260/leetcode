@@ -1,0 +1,12 @@
+67. Add Binary 2/4
+
+Given two binary strings, return their sum (also a binary string).
+
+For example,
+a = "11"
+b = "1"
+Return "100"
+
+110 + 10 = 1000
+011 + 01 = 0001 reverse 1000
+
