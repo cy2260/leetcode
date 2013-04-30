@@ -1,0 +1,11 @@
+29. Divide Two Integers 4/3
+
+Divide two integers without using multiplication, division and mod operator.
+
+bit manipulate, shift 
+10110/11
+11 shift 3 bits 11000 > 10110, quotient = 1000
+10110 - 1100 = 1010, quotient = 100
+1010 - 110 = 100, quotient = 100 | 10 = 110
+100 - 11 = 1, quotient = 110 | 1 = 111
+1 - 1 = 0, quotient = 111
