@@ -10,8 +10,9 @@ public:
         const char *end = s + strlen(s) - 1;
         while( end >= s && isspace(*end) ) --end;
         
-        if( *end == 'e' )              return false;
-        if( s == end && !isdigit(*s) ) return false;
+	if( *end == 'e' || *end == '+' || *end == '-' ) return false;
+        if( s == end && !isdigit(*s) )                  return false;
+
         
         bool isNum = false;
         bool isExp = false;
