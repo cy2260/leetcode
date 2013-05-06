@@ -5,7 +5,7 @@ public:
         
         int idx = 0;
         while( idx < n ) {
-            if( A[idx] > 0 && A[idx] < n && A[idx] != idx+1 && A[idx] != A[A[idx]-1] ) {
+            if( A[idx] > 0 && A[idx] < n && A[idx] != A[A[idx]-1] ) {
                 swap( A[idx], A[A[idx]-1] );
             }
             else  ++idx;
