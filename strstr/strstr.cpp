@@ -22,3 +22,35 @@ public:
         return NULL;
     }
 };
+
+class Solution {
+public:
+    char *strStr(char *haystack, char *needle) {
+        //if target str is empty, return haystack
+        if( !haystack || !needle ) return haystack;
+        if( *needle == '\0' )      return haystack;
+        
+        char* tmp = needle;
+        char* stopPtr = haystack;
+        while( *tmp != '\0' ) {
+            ++tmp;
+            ++stopPtr;
+        }
+        --stopPtr; //equivalent to strlen(haystack) - strlen(needle)
+        
+        while( *stopPtr != '\0' ) {
+            char *source = haystack;
+            char *target = needle;
+            while( *target != '\0' && *source == *target ) {
+                ++source;
+                ++target;
+            }
+            if( *target == '\0' ) return haystack;
+            
+            ++haystack;
+            ++stopPtr;
+        } 
+        return NULL;
+    }
+};
+
