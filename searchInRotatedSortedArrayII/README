@@ -1,0 +1,14 @@
+81. Search in Rotated Sorted Array II 5/3
+
+Follow up for "Search in Rotated Sorted Array":
+What if duplicates are allowed?
+
+Would this affect the run-time complexity? How and why?
+
+Write a function to determine if a given target is in the array.
+
+1,2,1,1,1,1
+in order to determine with half is sorted, need to advance low ptr or fall back high ptr if they equal to mid
+
+worst case O(n) 1,1,1,1
+
