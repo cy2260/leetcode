@@ -8,3 +8,7 @@ The longest consecutive elements sequence is [1, 2, 3, 4]. Return its length: 4.
 
 Your algorithm should run in O(n) complexity.
 
+use a map to keep track of the lowest node, length pair and the highest node, lenght pair. 
+
+initially, a new node will be added into the map with length 1
+then, if node - 1 and/or node + 1 is in the map, compute the length and update lowest node, length pair and highest node, length pair
