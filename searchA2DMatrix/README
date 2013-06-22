@@ -15,5 +15,6 @@ Consider the following matrix:
 ]
 Given target = 3, return true.
 
-binary search
-current solution is nlogn which can be improved to logn*logn
+binary search, nlogn
+
+use lower left corner or upper right corner to eliminate 1 row or 1 col at a time can have O(n) solution
